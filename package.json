@@ -1,0 +1,14 @@
+{
+  "name": "rm-todo-vanilla",
+  "version": "1.0.0",
+  "description": "Todo app build on Vanilla JS",
+  "scripts": {
+    "start": "serve",
+    "lint": "eslint --ext .js .",
+    "lint:fix": "npm run lint --fix"
+  },
+  "devDependencies": {
+    "serve": "^14.2.1",
+    "eslint": "^8.56.0"
+  }
+}
