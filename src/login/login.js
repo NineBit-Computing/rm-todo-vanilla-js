@@ -1,6 +1,6 @@
-function loginApp(valParam) {
-	const loginVal = 200;
-	return loginVal + valParam;
-}
+import dashboardApp from "../dashboard/dashboard.js";
 
-module.export.loginApp = loginApp;
+export default function loginApp(valParam) {
+	const incrementedValue = valParam + 1;
+	return dashboardApp(incrementedValue);
+}
