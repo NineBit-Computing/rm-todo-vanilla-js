@@ -2,6 +2,7 @@
   "name": "rm-todo-vanilla",
   "version": "1.0.0",
   "description": "Todo app build on Vanilla JS",
+  "type": "module",
   "scripts": {
     "start": "serve",
     "lint": "eslint --ext .js .",
