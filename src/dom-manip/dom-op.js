@@ -13,4 +13,11 @@ function showWelcomeMessage(msg) {
 	document.getElementById('paraId').innerText = msg;
 }
 
-export { createElementSlowOperation, showWelcomeMessage };
+function delegate(callback123) {
+	console.log('- delegate heavy lifting work -');
+	setTimeout(function () {
+		callback123('this is the output of heavy lifting work');
+	}, 2000);
+}
+
+export { createElementSlowOperation, showWelcomeMessage, delegate };
