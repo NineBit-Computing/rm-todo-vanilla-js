@@ -2,6 +2,7 @@ import {
 	createElementSlowOperation,
 	showWelcomeMessage, delegate
 } from '../dom-manip/dom-op.js';
+import { getCountries } from '../api/getData.js'
 
 function callbackDemo() {
 	console.log('parallel programming: main');
@@ -20,9 +21,13 @@ function callbackDemo() {
 
 function delegateDemo() {
 	console.log('- main thread.. delegateDemo - ');
-	delegate(function (delegateResponse) {
-		console.log('- received callback, delegateResponse is: ', delegateResponse);
+	// delegate(function (delegateResponse123) {
+	// 	console.log('- received callback, delegateResponse is: ', delegateResponse123);
+	// });
+	getCountries(function (data) {
+		console.log('- I am anonymous Fn, also acting as a callback, the data I received from the delegate method is: ', data);
 	});
+
 	console.log('- main thread.. continues with its work 1 - ');
 	console.log('- main thread.. continues with its work 2 - ');
 }
