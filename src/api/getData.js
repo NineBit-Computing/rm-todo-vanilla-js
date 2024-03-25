@@ -17,7 +17,7 @@ function getData(url1, done) {
     if (this.readyState == 4 && this.status == 200) {
       // console.log('------xhr.responseText in JSON ', JSON.parse(xhr.responseText));
       const jsonData = JSON.parse(xhr.responseText);
-      done(jsonData);
+      done([jsonData]);
     }
   };
   xhr.open("GET", url1, true);
