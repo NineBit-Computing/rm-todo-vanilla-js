@@ -3,18 +3,20 @@
 
 <head>
   <title>Valilla JS Project</title>
-  <!-- <script type="module" src="app.js"></script> -->
-  <!-- <script type="module" src="./oojs/main.js"></script> -->
+  <script type="module" src="./callstack/app.js"></script>
+  <script type="module" src="./oojs/main.js"></script>
   <script type="module" src="./async/parallel-programing.js"></script>
+  <script type="module" src="./async/promise.js"></script>
 </head>
 
 <body>
-  <h1 id="header">This is a Heading</h1>
-  <p id="paraId">This is a paragraph.</p>
-  <!-- <button onclick="initApp();">Start Calculation</button> -->
-  <!-- <button onclick="demoObjectOrientation();">Start Object Demo</button> -->
-  <!-- <button id="cbDemoBtn" onclick="callbackDemo();">Start Callback Demo</button> -->
+  <h1 id="header">Playground for learning Vanilla JS</h1>
+  <p id="paraId">Change this text at runtime</p>
+  <button onclick="initCallstack();">Trace Function Calls</button>
+  <button onclick="demoObjectOrientation();">Start Object Demo</button>
+  <button onclick="callstackDemo();">Start Callback Demo</button>
   <button onclick="delegateDemo();">Start Delegate Demo</button>
+  <button onclick="promiseDemo();">Start Promise Demo</button>
 </body>
 
 </html>

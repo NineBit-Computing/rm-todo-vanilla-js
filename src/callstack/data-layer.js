@@ -1,4 +1,4 @@
-export default function dashboardApp(valParam) {
+export default function dataLayer(valParam) {
 	if (typeof valParam !== 'number') {
 		throw new Error('Invalid Input. Only numbers allowed');
 	} else {

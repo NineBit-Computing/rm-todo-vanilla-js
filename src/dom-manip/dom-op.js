@@ -6,7 +6,6 @@ function createElementSlowOperation(options) {
 	newElem.style = options.style;
 	const anchor = document.getElementById(options.anchor);
 	anchor.insertAdjacentElement('afterend', newElem);
-	// document.body.insertBefore(newElem, anchor);
 }
 
 function showWelcomeMessage(msg) {
