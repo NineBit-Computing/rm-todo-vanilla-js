@@ -14,10 +14,15 @@ function fetchData(url, done) {
 function getData(url1, done) {
   const xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      // console.log('------xhr.responseText in JSON ', JSON.parse(xhr.responseText));
-      const jsonData = JSON.parse(xhr.responseText);
-      done([jsonData]);
+    if (this.readyState == 4) {
+      if (this.status == 200) {
+        // console.log('------xhr.responseText in JSON ', JSON.parse(xhr.responseText));
+        const jsonData = JSON.parse(xhr.responseText);
+        done(null, [jsonData]); // standard that you pass null in case of success
+      } else {
+        console.log('server response is not 200');
+        done('error occured with code');
+      }
     }
   };
   xhr.open("GET", url1, true);
