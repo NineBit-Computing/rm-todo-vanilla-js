@@ -1,3 +1,5 @@
+import { getCountries } from '../api/getData.js';
+
 function promiseDemo() {
   // promiseType1();
   promiseType2();
@@ -36,12 +38,15 @@ function delegate() {
   const delegatePromise = new Promise(function (resolve, reject) {
     console.log(`inside promise: statement 5`);
     // we should make an API call to exibit async programming
-    const bool = 0;
-    if (bool) {
-      resolve('I have passed the exam');
-    } else {
-      reject('I have failed the exam');
-    }
+    getCountries(function (isError, data) {
+      if (isError) {
+        console.log('----- isError: ', isError);
+        reject(isError);
+      } else {
+        console.log('----- no error ', data);
+        resolve(data);
+      }
+    });
   });
   return delegatePromise;
 }
