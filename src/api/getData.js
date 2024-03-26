@@ -21,7 +21,9 @@ function getData(url1, done) {
     }
   };
   xhr.open("GET", url1, true);
+  console.log('----- before sending the request');
   xhr.send();
+  console.log('----- after sending the request');
 }
 
 function getCountries(callback) {
